@@ -31,7 +31,7 @@ class Counter:
     def decrease(self, value=1):
         self.value -= value
 
-    def iter(self):
+    def __iter__(self):
         return self
 
     def __next__(self):
@@ -42,11 +42,9 @@ class Counter:
 
 counter = Counter(0)
 print(counter.value)
-counter.increase(20)
+counter.increase(5)
 print(counter.value)
-counter.decrease(10)
+counter.decrease(2)
 print(counter.value)
 counter.__next__()
 print(next(counter))
-
-
